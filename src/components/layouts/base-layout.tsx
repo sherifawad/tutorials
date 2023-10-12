@@ -1,4 +1,5 @@
 import Providers from "@/lib/providers";
+import Footer from "./footer-layout";
 
 export default function BaseLayout({
     children,
@@ -14,6 +15,7 @@ export default function BaseLayout({
                         {children}
                     </main>
                 </div>
+                <Footer />
             </Providers>
         </>
     );

@@ -70,6 +70,25 @@
     * {
         @apply border-border;
     }
+    * {
+        scrollbar-width: thin;
+    }
+
+    *::-webkit-scrollbar {
+        @apply bg-transparent w-2;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        @apply bg-secondary-foreground rounded-full;
+    }
+
+    .scrollbar-hidden::-webkit-scrollbar-thumb {
+        @apply bg-transparent;
+    }
+
+    .scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+        @apply bg-secondary-border;
+    }
     body {
         @apply bg-background text-foreground;
     }
