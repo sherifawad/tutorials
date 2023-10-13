@@ -4,6 +4,16 @@ export const productSchema = z.object({
     name: z.string(),
     price: z.coerce.number().positive(),
 });
+export const WishSchema = z.object({
+    id: z.coerce.number().positive(),
+    price: z.coerce.number().positive(),
+});
+
+export const productSearchParameterSchema = z.object({
+    id: z.coerce.number(),
+    price: z.coerce.number().positive().optional(),
+    color: z.enum(["red", "green", "yellow"]).optional(),
+});
 
 export const signUpSchema = z.object({
     name: z
