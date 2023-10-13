@@ -33,7 +33,7 @@ import {
     CommandInput,
     CommandItem,
 } from "./ui/command";
-import { formAction } from "@/app/signup/_actions";
+import { formAction } from "@/app/(auth)/signup/_actions";
 
 const languages = [
     { label: "English", value: "en" },
@@ -58,7 +58,7 @@ const SignUPForm = () => {
         defaultValues,
     });
 
-    async function onSubmit(data: signUp) {
+    async function onSubmit(data: unknown) {
         // toast({
         //     title: "You submitted the following values:",
         //     description: (
