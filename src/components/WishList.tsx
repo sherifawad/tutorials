@@ -16,10 +16,6 @@ function WishList() {
     const validateSearchParams =
         productSearchParameterSchema.safeParse(searchParamsObject);
     if (validateSearchParams.success) {
-        console.log(
-            "🚀 ~ file: WishList.tsx:12 ~ WishList ~ validateSearchParams:",
-            validateSearchParams.data
-        );
         if (isMounted) {
             const wishes: unknown = JSON.parse(
                 localStorage.getItem("wishes") || "[]"
