@@ -10,3 +10,14 @@ export type FormDataErrors = z.inferFlattenedErrors<
 export type CustomFormDataErrors = {
     [key in keyof signUp]: string;
 };
+
+// combine types into better format
+export type Prettify<T> = {
+    [K in keyof T]: T[K];
+} & {};
+
+type c = Prettify<
+    Product & {
+        addresses: string[];
+    }
+>;
