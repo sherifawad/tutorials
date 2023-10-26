@@ -6,7 +6,12 @@ export default async function AdminPage() {
     const session = await getServerSession(authOptions);
     return (
         <div>
-            {JSON.stringify(session)}
+            <pre>
+                <code>
+                    <span>Session Data: </span>{" "}
+                    {JSON.stringify(session, null, 2)}
+                </code>
+            </pre>
             <CancelledFetch />
         </div>
     );
